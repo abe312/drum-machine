@@ -17,11 +17,16 @@ class Drum extends Component {
   handleKeyPress = e => {
     const { bank, power, data1, data2, play, updateDisplay } = this.props;
     const arr = [81, 87, 67, 88, 90, 68, 65, 83, 69];
-    if (!power || arr.findIndex(elem => elem == e.keyCode) == -1) return;
+    const error = 'Power❌On';
+    if (arr.findIndex(elem => elem === e.keyCode) === -1) return;
+    if (!power) {
+      updateDisplay(error);
+      return;
+    }
     const data = bank ? data1 : data2;
     console.log('here');
     const { keyTrigger, url, id } = data.filter(
-      item => item.keyCode == e.keyCode,
+      item => item.keyCode === e.keyCode,
     )[0];
 
     // console.log(obj);
@@ -53,18 +58,8 @@ class Drum extends Component {
   };
 
   render() {
-    const {
-      bank,
-      power,
-      keypress,
-      volume,
-      data1,
-      data2,
-      play,
-      updateDisplay,
-    } = this.props;
+    const { bank, power, volume, data1, data2 } = this.props;
 
-    const error = 'Power❌On';
     const keyboard = items => {
       // console.log(items);
       return (

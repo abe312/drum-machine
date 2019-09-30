@@ -15,7 +15,11 @@ class DrumKey extends Component {
       power,
     } = this.props;
     const handleKeypress = () => {
-      if (!power) return;
+      if (!power) {
+        const error = 'Power❌On';
+        updateDisplay(error);
+        return;
+      }
       updateDisplay(`${keyCode}:  ${sound}`);
       play(song);
       playSound(keyCode);

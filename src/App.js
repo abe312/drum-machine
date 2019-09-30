@@ -13,17 +13,13 @@ const store = configureStore();
 
 function App() {
   return (
-    <div className="App">
-      <>
-        <Provider store={store}>
-          <div className="grid-container">
-            <Header />
-            <Drum />
-            <Footer />
-          </div>
-        </Provider>
-      </>
-    </div>
+    <>
+      <Provider store={store}>
+        <Header />
+        <Drum />
+        <Footer />
+      </Provider>
+    </>
   );
 }
 

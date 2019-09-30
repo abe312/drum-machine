@@ -1,18 +1,5 @@
 import { KEYPRESS } from '../constants/';
 
-function handleKeyPress(e) {
-  if (e.keyCode === this.props.keyCode) {
-    this.playSound();
-  }
-}
-function playSound(e) {
-  const sound = document.getElementById(this.props.keyTrigger);
-  sound.currentTime = 0;
-  sound.play();
-  this.activatePad();
-  setTimeout(() => this.activatePad(), 100);
-  this.props.updateDisplay(this.props.clipId.replace(/-/g, ' '));
-}
 const keypressReducer = (state = {}, action) => {
   if (action.type === KEYPRESS) {
     switch (action.payload) {
