@@ -56,7 +56,9 @@ class Controls extends Component {
               <span className="toggle"></span>
             </label>
           </div>
-          <div className="item display">{display}</div>
+          <div className="item display" id="display">
+            {display}
+          </div>
 
           <div className="item volume">
             <input

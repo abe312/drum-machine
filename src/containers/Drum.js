@@ -93,7 +93,7 @@ class Drum extends Component {
 
     return (
       <>
-        <div className="drum">
+        <div className="drum" id="drum-machine">
           <div className="block-1">
             {bank ? keyboard(data1) : keyboard(data2)}
             {bank ? audios(data1) : audios(data2)}

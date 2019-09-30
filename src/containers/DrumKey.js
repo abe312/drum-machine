@@ -34,7 +34,7 @@ class DrumKey extends Component {
     };
 
     return (
-      <div className="key" data-key={keyCode} onClick={handleKeypress}>
+      <div className="key drum-pad" data-key={keyCode} onClick={handleKeypress}>
         <kbd>{keyCode}</kbd>
         <span className="sound">{sound}</span>
       </div>

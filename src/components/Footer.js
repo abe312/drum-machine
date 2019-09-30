@@ -10,6 +10,9 @@ export default function Footer() {
         </span>{' '}
         by: <a href="https://abhineet.me">@abe312</a>
       </h3>
+      {/* <p>
+        <a href="https://github.com/abe312/drum-machine">Fork me </a>
+      </p> */}
     </div>
   );
 }
